@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var a = -2, b = 2, ch, res, result, str = '', operation = '', work = 0, val = 0;
+    work = parseInt(prompt('Введите номер задачи: 3, 4, 5, 6, 7 или 8'));
+
+    if (work == 3) {
+      a = parseInt(prompt('Введите a:'));
+      b = parseInt(prompt('Введите b:'));
+      if (a >= 0 && b >= 0) {
+        res = a - b;
+        ch = '-';
+      }
+      if (a < 0 && b < 0) {
+        res = a * b;
+        ch = 'x';
+      }
+      if ((a >= 0 && b < 0) || (a < 0 && b >= 0)) {
+        res = a + b;
+        ch = '+';
+      }
+      alert('Результат: ' + a + ' ' + ch + ' ' + b + ' = ' + res);
+    }
+
+
+    /*  4. Присвоить переменной а значение в промежутке[0..15].С помощью оператора switch организовать вывод чисел от a до 15. ### */
+
+    if (work == 4) {
+      a = Math.round(Math.random() * (15 - 0) + 0);
+      switch (a) {
+        case 0:
+          str = '0';
+        case 1:
+          str = str + ', ' + 1;
+        case 2:
+          str = str + ', ' + 2;
+        case 3:
+          str = str + ', ' + 3;
+        case 4:
+          str = str + ', ' + 4;
+        case 5:
+          str = str + ', ' + 5;
+        case 6:
+          str = str + ', ' + 6;
+        case 7:
+          str = str + ', ' + 7;
+        case 8:
+          str = str + ', ' + 8;
+        case 9:
+          str = str + ', ' + 9;
+        case 10:
+          str = str + ', ' + 10;
+        case 11:
+          str = str + ', ' + 11;
+        case 12:
+          str = str + ', ' + 12;
+        case 13:
+          str = str + ', ' + 13;
+        case 14:
+          str = str + ', ' + 14;
+        case 15:
+          str = str + ', ' + 15;
+      }
+      alert(str);
+    }
+
+    /*  5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return. */
+
+    if (work == 5) {
+      function mathOperation(arg1, arg2) {
+        alert('Сложение: ' + (arg1 + arg2));
+        alert('Вычитание: ' + (arg1 - arg2));
+        alert('Умножение: ' + (arg1 * arg2));
+        alert('Деление: ' + (arg1 / arg2));
+      }
+
+      a = parseInt(prompt('Введите a:'));
+      b = parseInt(prompt('Введите b:'));
+
+      mathOperation(a, b);
+    }
+
+
+    /*  6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation)*/
+    if (work == 6) {
+      function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+          case 'сложение' || 'Сложение' || 'сЛОЖЕНИЕ':
+            result = arg1 + arg2;
+            break;
+          case 'умножение' || 'Умножение' || 'уНОЖЕНИЕ':
+            result = arg1 * arg2;
+            break;
+          case 'вычитание' || 'Вычитание' || 'вЫЧИТАНИЕ':
+            result = arg1 - arg2;
+            break;
+          case 'деление' || 'Деление' || 'дЕЛЕНИЕ':
+            result = arg1 / arg2;
+            break;
+
+          default:
+            result = 0;
+            break;
+        }
+
+        return result;
+      }
+
+      a = parseInt(prompt('Введите a:'));
+      b = parseInt(prompt('Введите b:'));
+      operation = prompt('Введите операцию: сложение, вычитание, умножение или деление');
+
+      mathOperation(a, b, operation);
+      alert(result);
+    }
+
+    /*  7.*/
+
+    /* *С помощью рекурсии организовать функцию возведения числа в степень */
+
+    if (work == 8) {
+      function st(val, n) {
+        if (n > 1) {
+          val = val * Math.pow(val, n - 1);
+          return val;
+        } else {
+          return val;
+        }
+      }
+
+      val = parseInt(prompt('Введите число:'));
+      n = parseInt(prompt('Введите степень:'));
+
+      val = st(val, n);
+
+      alert(val);
+    }
+
+
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

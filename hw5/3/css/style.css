@@ -1,0 +1,21 @@
+div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.img {
+  width: 70%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-position-x: 139px;
+  overflow: hidden;
+}
+
+.pre, .next {
+  margin: auto;
+  font-size: 75px;
+  text-decoration: none;
+  color: #5e5e5e;
+}

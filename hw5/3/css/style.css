@@ -1,0 +1,35 @@
+.wrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.img-big {
+  width: 80%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  /* background-position-x: 139px; */
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+}
+
+.pre, .next {
+  margin: auto;
+  font-size: 75px;
+  text-decoration: none;
+  color: #5e5e5e;
+}
+
+.wrap.img-mini {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  height: 50px;
+  margin: 15px auto;
+  box-sizing: border-box;
+  cursor: pointer;
+}

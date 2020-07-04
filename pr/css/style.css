@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.div {
+  width: 100%;
+  min-height: 200px;
+  max-height: 500px;
+}
+
+.item {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
